@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" ng-app="MusicManager" ng-strict-di>
+<html lang="en" ng-app="it-phonecat" ng-di-strict>
+
 <head>
     <meta charset="utf-8">
     <title>ITESOFT.FirstStart</title>
@@ -7,7 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Web Application Favorite Icon -->
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.css"></link>
+    <script src="assets/lib/angular/angular.js"></script>
+    <!-- Mes controlleurs -->
+    <script src="app/features/phone/phoneListCtrl.js"></script>
 </head>
+
 <body>
+    <div class="container-fluid" ng-controller="PhoneListCtrl">
+        <div class="row">
+            Search:
+            <input ng-model="query"> Sort by:
+            <select ng-model="orderProp">
+                <option value="name">Alphabetical</option>
+                <option value="age">Newest</option>
+            </select>
+
+
+            <ul class="phones">
+                <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+                    <span>{{phone.name}}</span>
+                    <p>{{phone.snippet}}</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
 </body>
+
 </html>
