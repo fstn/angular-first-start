@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-2">
+        <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+    </div>
+    <div class="col-xs-10">
+        <div class="row">
+            <a href="#/phones/{{phone.id}}">{{phone.name}}</a></div>
+        <div class="row">
+            <p>{{phone.snippet}}</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+    <button type="button" class="btn btn-success" ng-click="buyPhoneFunction({add:phone});">Buy Phone</button>
+    </div>
+</div>
