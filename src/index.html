@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="it-phonecat" ng-di-strict>
+<html lang="en" ng-app="it-phonecat">
 
 <head>
     <meta charset="utf-8">
@@ -10,20 +10,23 @@
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.css"></link>
     <script src="assets/lib/angular/angular.js"></script>
+    <script src="assets/lib/angular-route/angular-route.js"></script>    
     
     <!-- Mes Configs -->
     <script src="app/common/modules/basket/basketDirective.js"></script>
     <script src="app/app.module.js"></script>
+    <script src="app/app.route.js"></script>
     
     <!-- Mes controlleurs -->
-    <script src="app/features/phone/phoneListCtrl.js"></script>
+    <script src="app/features/phones/phoneListCtrl.js"></script>
     
     <!-- Mes Directives -->
-    <script src="app/features/phone/phoneDirective.js"></script>
+    <script src="app/features/phones/phoneDirective.js"></script>
+    
 </head>
 
 <body>
-    <div ng-include="'app/app.template.html'"/>   
+<div ng-view></div>
 </body>
 
 </html>

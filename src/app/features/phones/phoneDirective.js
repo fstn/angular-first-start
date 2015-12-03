@@ -9,6 +9,6 @@ angular.module('it-phonecat.controllers').directive('tutoPhone', function () {
         },
         controller: ["$scope",function(scope){
         }],
-        templateUrl:"app/features/phone/phoneTemplate.html"
+        templateUrl:"app/features/phones/phoneTemplate.html"
     }
 })

@@ -1,15 +1,11 @@
 'use strict';
 
-angular.module('it-phonecat.controllers').controller('PhoneListCtrl', ['$scope', '$http', function ($scope, $http) {
+angular.module('it-phonecat.controllers').controller('PhoneListCtrl', ['$scope', 'phones', function ($scope, phones) {
         $scope.phones = [];
         $scope.selectedPhones = [];
         $scope.panier = "";
         console.log("toto");
-        $http.get('assets/js/phones/phones.json').then(function (data) {
-            $scope.phones = data.data;
-            console.log(data);
-
-        });
+        $scope.phones = phones.data;
 
         $scope.orderProp = 'age';
 
